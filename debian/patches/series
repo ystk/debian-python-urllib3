@@ -4,3 +4,5 @@
 04_relax_nosetests_options.patch
 05_avoid-embedded-ssl-match-hostname.patch
 06_do-not-make-SSLv3-mandatory.patch
+CVE-2019-11236_1_of_2.patch
+CVE-2019-11236_2_of_2.patch
