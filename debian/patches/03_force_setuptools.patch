@@ -3,6 +3,10 @@ Description: Use setuptools.setup() so that the bdist_wheel
  command will work.
 Last-Update: 2014-05-15
 
+---
+ setup.py |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
 --- a/setup.py
 +++ b/setup.py
 @@ -1,6 +1,6 @@

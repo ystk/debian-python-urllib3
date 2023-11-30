@@ -5,6 +5,10 @@ Author: Daniele Tricoli <eriol@mornie.org>
 Forwarded: not-needed
 Last-Update: 2014-7-7
 
+---
+ setup.cfg |    4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
 --- a/setup.cfg
 +++ b/setup.cfg
 @@ -1,8 +1,8 @@

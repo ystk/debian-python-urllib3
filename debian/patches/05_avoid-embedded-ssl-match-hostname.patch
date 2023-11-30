@@ -6,6 +6,10 @@ Author: Stefano Rivera <stefanor@debian.org>
 Forwarded: not-needed
 Last-Update: 2014-11-18
 
+---
+ urllib3/packages/__init__.py |    9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
+
 --- a/urllib3/packages/__init__.py
 +++ b/urllib3/packages/__init__.py
 @@ -1,4 +1,9 @@

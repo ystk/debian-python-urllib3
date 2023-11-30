@@ -5,9 +5,13 @@ Bug-Ubuntu: https://launchpad.net/bugs/1047054
 Bug-Debian: http://bugs.debian.org/686872
 Last-Update: 2014-09-01
 
+---
+ urllib3/connectionpool.py |    6 ++++--
+ 1 file changed, 4 insertions(+), 2 deletions(-)
+
 --- a/urllib3/connectionpool.py
 +++ b/urllib3/connectionpool.py
-@@ -628,6 +628,8 @@
+@@ -628,6 +628,8 @@ class HTTPSConnectionPool(HTTPConnection
      ``ssl_version`` are only used if :mod:`ssl` is available and are fed into
      :meth:`urllib3.util.ssl_wrap_socket` to upgrade the connection socket
      into an SSL socket.
@@ -16,7 +20,7 @@ Last-Update: 2014-09-01
      """
  
      scheme = 'https'
-@@ -637,8 +639,8 @@
+@@ -637,8 +639,8 @@ class HTTPSConnectionPool(HTTPConnection
                   strict=False, timeout=Timeout.DEFAULT_TIMEOUT, maxsize=1,
                   block=False, headers=None, retries=None,
                   _proxy=None, _proxy_headers=None,

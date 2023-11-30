@@ -6,3 +6,17 @@
 06_do-not-make-SSLv3-mandatory.patch
 CVE-2019-11236_1_of_2.patch
 CVE-2019-11236_2_of_2.patch
+CVE-2018-20060-1.patch
+CVE-2018-20060-2.patch
+CVE-2018-20060-3.patch
+CVE-2018-20060-5.patch
+CVE-2018-20060-6.patch
+CVE-2018-20060-7.patch
+CVE-2018-20060-8.patch
+CVE-2018-20060-9.patch
+CVE-2018-20060-10.patch
+CVE-2018-20060-12.patch
+CVE-2020-26137.patch
+CVE-2018-25091.patch
+CVE-2023-43804.patch
+CVE-2023-45803.patch

@@ -1,11 +1,30 @@
 Description: Do not use embedded copy of python-six.
 Author: Daniele Tricoli <eriol@mornie.org>
 Forwarded: not-needed
-Last-Update: 2014-09-23
+Last-Update: 2023-11-30
+
+---
+ dummyserver/handlers.py                      |    2 +-
+ test/__init__.py                             |    2 +-
+ test/contrib/test_pyopenssl.py               |    2 +-
+ test/test_collections.py                     |    2 +-
+ test/test_fields.py                          |    2 +-
+ test/test_filepost.py                        |    2 +-
+ test/test_retry.py                           |    2 +-
+ test/with_dummyserver/test_connectionpool.py |    2 +-
+ urllib3/_collections.py                      |    2 +-
+ urllib3/connection.py                        |    2 +-
+ urllib3/connectionpool.py                    |    2 +-
+ urllib3/fields.py                            |    2 +-
+ urllib3/filepost.py                          |    4 ++--
+ urllib3/response.py                          |    2 +-
+ urllib3/util/request.py                      |    2 +-
+ urllib3/util/retry.py                        |    2 +-
+ 16 files changed, 17 insertions(+), 17 deletions(-)
 
 --- a/test/test_collections.py
 +++ b/test/test_collections.py
-@@ -4,7 +4,7 @@
+@@ -4,7 +4,7 @@ from urllib3._collections import (
      HTTPHeaderDict,
      RecentlyUsedContainer as Container
  )
@@ -16,7 +35,7 @@ Last-Update: 2014-09-23
  
 --- a/urllib3/connectionpool.py
 +++ b/urllib3/connectionpool.py
-@@ -27,7 +27,7 @@
+@@ -27,7 +27,7 @@ from .exceptions import (
      InsecureRequestWarning,
  )
  from .packages.ssl_match_hostname import CertificateError
@@ -27,7 +46,7 @@ Last-Update: 2014-09-23
      DummyConnection,
 --- a/urllib3/filepost.py
 +++ b/urllib3/filepost.py
-@@ -3,8 +3,8 @@
+@@ -3,8 +3,8 @@ import codecs
  from uuid import uuid4
  from io import BytesIO
  
@@ -40,7 +59,7 @@ Last-Update: 2014-09-23
  writer = codecs.lookup('utf-8')[3]
 --- a/urllib3/response.py
 +++ b/urllib3/response.py
-@@ -4,7 +4,7 @@
+@@ -4,7 +4,7 @@ from socket import timeout as SocketTime
  
  from ._collections import HTTPHeaderDict
  from .exceptions import ProtocolError, DecodeError, ReadTimeoutError
@@ -51,7 +70,7 @@ Last-Update: 2014-09-23
  
 --- a/test/test_filepost.py
 +++ b/test/test_filepost.py
-@@ -2,7 +2,7 @@
+@@ -2,7 +2,7 @@ import unittest
  
  from urllib3.filepost import encode_multipart_formdata, iter_fields
  from urllib3.fields import RequestField
@@ -62,7 +81,7 @@ Last-Update: 2014-09-23
  BOUNDARY = '!! test boundary !!'
 --- a/dummyserver/handlers.py
 +++ b/dummyserver/handlers.py
-@@ -211,7 +211,7 @@
+@@ -211,7 +211,7 @@ def _parse_header(line):
      """
      import tornado.httputil
      import email.utils
@@ -95,7 +114,7 @@ Last-Update: 2014-09-23
  class TestRequestField(unittest.TestCase):
 --- a/urllib3/_collections.py
 +++ b/urllib3/_collections.py
-@@ -14,7 +14,7 @@
+@@ -14,7 +14,7 @@ try: # Python 2.7+
      from collections import OrderedDict
  except ImportError:
      from .packages.ordered_dict import OrderedDict
@@ -106,7 +125,7 @@ Last-Update: 2014-09-23
  __all__ = ['RecentlyUsedContainer', 'HTTPHeaderDict']
 --- a/urllib3/connection.py
 +++ b/urllib3/connection.py
-@@ -3,7 +3,7 @@
+@@ -3,7 +3,7 @@ import sys
  import socket
  from socket import timeout as SocketTimeout
  import warnings
@@ -127,7 +146,7 @@ Last-Update: 2014-09-23
  
 --- a/urllib3/util/retry.py
 +++ b/urllib3/util/retry.py
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,7 @@ from ..exceptions import (
      ReadTimeoutError,
      MaxRetryError,
  )
@@ -148,7 +167,7 @@ Last-Update: 2014-09-23
      ConnectTimeoutError,
 --- a/test/__init__.py
 +++ b/test/__init__.py
-@@ -7,7 +7,7 @@
+@@ -7,7 +7,7 @@ import socket
  from nose.plugins.skip import SkipTest
  
  from urllib3.exceptions import MaxRetryError, HTTPWarning
@@ -166,3 +185,14 @@ Last-Update: 2014-09-23
  
  if six.PY3:
      raise SkipTest('Testing of PyOpenSSL disabled on PY3')
+--- a/test/with_dummyserver/test_connectionpool.py
++++ b/test/with_dummyserver/test_connectionpool.py
+@@ -30,7 +30,7 @@ from urllib3.exceptions import (
+     ReadTimeoutError,
+     ProtocolError,
+ )
+-from urllib3.packages.six import b, u
++from six import b, u
+ from urllib3.util.retry import Retry
+ from urllib3.util.timeout import Timeout
+ 

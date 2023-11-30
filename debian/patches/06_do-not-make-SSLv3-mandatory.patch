@@ -5,9 +5,13 @@ Author: Daniele Tricoli <eriol@mornie.org>
 Forwarded: https://github.com/shazow/urllib3/issues/487#issuecomment-63805742
 Last/Update: 2014-11-20
 
+---
+ urllib3/contrib/pyopenssl.py |    7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
 --- a/urllib3/contrib/pyopenssl.py
 +++ b/urllib3/contrib/pyopenssl.py
-@@ -70,9 +70,14 @@
+@@ -70,9 +70,14 @@ HAS_SNI = SUBJ_ALT_NAME_SUPPORT
  # Map from urllib3 to PyOpenSSL compatible parameter-values.
  _openssl_versions = {
      ssl.PROTOCOL_SSLv23: OpenSSL.SSL.SSLv23_METHOD,
