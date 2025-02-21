@@ -1,3 +1,11 @@
+python-urllib3 (1.9.1-3+deb8u3) jessie-security; urgency=high
+
+  * Non-maintainer upload by the ELTS Team.
+  * Fix CVE-2024-37891: Proxy-Authorization request header isn't stripped
+    during cross-origin redirects. (Closes: #1074149)
+
+ -- Guilhem Moulin <guilhem@debian.org>  Thu, 20 Feb 2025 17:10:38 +0100
+
 python-urllib3 (1.9.1-3+deb8u2) jessie-security; urgency=high
 
   * Non-maintainer upload by the Extended LTS Security Team.
